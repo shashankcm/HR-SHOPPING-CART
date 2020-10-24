@@ -31,7 +31,7 @@ export default class Cart extends Component {
                                     <td className="numeric quantity" data-testid="cart-item-quantity">
                                         {cartItem.quantity}
                                     </td>
-                                    <td className="numeric total" data-testid="cart-item-quantity">
+                                    <td className="numeric total" data-testid="cart-item-quantity-price">
                                         {cartItem.quantity * cartItem.price}
                                     </td>
                                 </tr>
