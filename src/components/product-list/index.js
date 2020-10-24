@@ -6,7 +6,8 @@ export default class ProductList extends Component {
         let cartItem = {
             id: product.id,
             item: product.name,
-            quantity: product.cartQuantity
+            quantity: product.cartQuantity,
+            price: product.price
         }
         this.props.addItemToCart(cartItem);
     }

@@ -16,6 +16,7 @@ export default class Cart extends Component {
                         <th></th>
                         <th>Item</th>
                         <th className="numeric">Quantity</th>
+                        <th className="numeric">Item Cost</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -30,13 +31,16 @@ export default class Cart extends Component {
                                     <td className="numeric quantity" data-testid="cart-item-quantity">
                                         {cartItem.quantity}
                                     </td>
+                                    <td className="numeric total" data-testid="cart-item-quantity">
+                                        {cartItem.quantity * cartItem.price}
+                                    </td>
                                 </tr>
                             )
                         })
                     }
-
                     </tbody>
                 </table>
+                <h3 style={{margin: '0 100px'}}>Total - {this.props.cart.items.reduce((prev, curr) => prev + (curr.price * curr.quantity), 0)}</h3>
             </div>
 
         );

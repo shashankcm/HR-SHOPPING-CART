@@ -12,6 +12,7 @@ class App extends Component {
             product.id = index + 1;
             product.image = `/images/items/${product.name.toLocaleLowerCase()}.png`;
             product.cartQuantity = 0;
+            product.price = product.price;
             return product;
         });
         this.state = {
